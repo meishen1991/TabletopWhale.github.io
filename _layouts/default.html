@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% include head.html %}
+</head>
+
+<body>
+<div id="header_container">
+  <!-- menu -->
+  <div class="header_center_width ">
+    <div id="header_left_align">
+      <a href="/index.html"> 
+      <div class="wordmark btn-hide-300" >TABLETOP WHALE</div> 
+      </a>
+      <input type="checkbox" id="navbar-checkbox" class="navbar-checkbox">
+      <nav class="menu">
+        <ul>
+          <li>  Home    </li>
+          <li> <a href="/faq.html">     About   </a> </li>
+          <li> <a href="/archive.html"> Archive </a> </li>
+        </ul>
+        <label for="navbar-checkbox" class="navbar-handle"></label>
+        <div class="navbar-marginbottom"></div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+{{ content }}
+
+{% if paginator.page == 1 %}
+<div class="title-container">
+   <div class="title"> 
+      <h1>Tabletop Whale is an original science infographic blog.</h1>
+      <h2> Infographics made with love by a designer with a molecular biology degree. New designs published every two to three weeks. </h2>
+  </div>
+</div>
+{% else %}
+<div class="margin-blogtop"></div>
+{% endif %}
+
+<main>
+{% for post in paginator.posts %}
+<div class="container-blog-outsidemargin margin-large">
+{% if post.image %}
+  <div class="container-blog"> 
+{% else %}
+  <div class="container-blog container-blog-noimage-top"> 
+{% endif %}
+        <h1>{{ post.title }}</h1>
+        {% if post.guest %}
+        <!-- date & link to guest author -->
+            {% if post.guestlink %}
+                <div class="date"> 
+                  <time> {{post.date | date: "%B %-d %Y "}} </time> 
+                  &middot; 
+                  <a href="{{post.guestlink}}">
+                    {{post.guest}} 
+                  </a>
+                </div>
+            {% else %}
+              <div class="date"> 
+                <time> {{post.date | date: "%B %-d %Y "}} </time> 
+                &middot; 
+                <em class="archive-text"> {{post.guest}} </em>
+              </div> 
+            {% endif %}
+        {% else %}
+          <div class="date"> <time> {{post.date | date: "%B %-d %Y" }} </time> </div>
+        {% endif %}
+        <hr>
+        {% if post.columns %}
+        <!-- default is 2 column post -->
+        <!-- any value in post.columns turns blog into 1 column post -->
+        <div class="container-blog-nocolumns">
+          {{ post.content }}
+        </div>
+        {% else %}
+        <div class="container-blog-columns">
+          {{ post.content }}
+        </div>
+        {% endif %}
+  </div>
+{% if post.image %}
+    <figure class="container-blog-nomargin default_image_blog"><img src="{{ post.image }}" /></figure>
+    <div class="container-blog bottom"> 
+{% else %}
+  <div class="container-blog container-blog-noimage-bottom"> 
+{% endif %}
+        <!-- custom button specs -->
+         {% if post.buy %}
+            <a href="{{post.buy}}">
+              <div class="button btn-ignore-600 btn-white" target="_blank"> 
+                {{ post.buytext }} 
+              </div>
+            </a>
+            <a href="{{post.buy}}">
+              <div class="button btn-show-600 btn-white"> {{ post.buytext }} </div>
+            </a>
+          {% endif %}
+          {% unless post.comments %}
+            <a href="{{post.url}}">
+              <div class="button btn-ignore-600 btn-white" target="_blank"> 
+                Leave a comment 
+              </div>
+            <a href="{{post.url}}">
+              <div class="button btn-show-600 btn-white"> Leave a comment </div>
+            </a>
+          {% endunless %}
+        {% unless post.nosocial %}
+          <a href="https://twitter.com/intent/tweet?status={{post.title}} https://tabletopwhale.com{{post.url}} from @eleanor_lutz" target="_blank">
+          <div class="button square btn-ignore-600 btn-colfit social-icon-general"><i class="fa fa-twitter"   > </i> </div></a>
+          <a href="http://www.pinterest.com/pin/create/button/?url=https://tabletopwhale.com{{post.url}}&media=tabletopwhale.com{{page.image}}&description={{post.title}}:%20from%20TabletopWhale.com" target="_blank" data-pin-do="buttonPin"data-pin-config="above">
+          <div class="button square btn-ignore-600 btn-colfit social-icon-general"><i class="fa fa-pinterest"   > </i> </div></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://tabletopwhale.com{{ post.url }}" target="_blank"><div class="button square btn-ignore-600 btn-colfit social-icon-general"><i class="fa fa-facebook"   > </i></div>
+          </a>
+        {% endunless %}
+       </div>
+  </div>
+</div>
+<div class="margin=normal"></div>
+{% endfor %}
+</main>
+
+{% include pagination.html %}
+{% include footer.html %}
+</body>
+</html>

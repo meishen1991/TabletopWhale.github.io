@@ -1,0 +1,10 @@
+name: Tabletop Whale
+description: New science infographics every Monday and Friday.
+url: http://tabletopwhale.com
+author: Eleanor Lutz
+email: TabletopWhale@gmail.com
+
+timezone: America/Los_Angeles	
+paginate: 3 					
+paginate_path: "/page:num"
+markdown: redcarpet

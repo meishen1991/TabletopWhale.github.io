@@ -1,0 +1,119 @@
+{% if paginator.total_pages == 1 %}
+<!-- If # pages = 1, add margin but no buttons -->
+  <div class="margin-5-IEsafe"></div>
+{% else %}
+  <div class="pagination">
+    <div class="pagination-fixed">
+      {% if paginator.previous_page %} 
+      <!-- Add "Previous" button to all -->
+         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button paginate">Previous</a>
+      {% else %} 
+        <div class="button paginate current">Previous</div> 
+      {% endif %}
+
+      {% if paginator.total_pages < 10 %}
+      <!-- If # pages < 10, show buttons for all pages -->
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <div class="button current btn-ignore-700">{{ page }}</div>
+          {% elsif page == 1 %}
+            <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="button btn-ignore-700">{{ page }}</a>
+          {% else %}
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="button btn-ignore-700">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+
+      {% else %} 
+      <!-- If # pages > 10, show only buttons for 3 pages on each side of current page + first and last pages -->
+        {% assign x = paginator.page | plus:2  %}
+        {% assign y = paginator.page | minus:2 %}
+        {% assign z = paginator.page | minus:1 %}
+        {% assign a = paginator.total_pages | minus: 2 %}
+        {% assign b = 3 %}
+
+        {% if paginator.page >= a %}
+        <!-- If current page is less than 3 away from last page -->
+          {% for page in (1..paginator.total_pages)%}
+            {% if page == 1 %}
+              <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="button btn-ignore-700">{{ page }}</a>
+            {% endif %}
+          {% endfor %}
+          <div class="button transparent btn-ignore-700">...</div>
+          {% for page in (y..paginator.total_pages) %}
+            {% if page == paginator.page %}
+              <div class="button current btn-ignore-700">{{ page }}</div>
+            {% elsif page == 1%}
+              <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="button btn-ignore-700 page">{{ page }}</a>
+            {% else %}
+              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="button btn-ignore-700">{{ page }}</a> 
+            {% endif %}
+          {% endfor %}
+
+        {% elsif paginator.page <= b %} 
+        <!-- If current page is less than 3 away from first page -->
+          {% for page in (1..z) %}
+            {% if page == 1 %}
+              <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="button btn-ignore-700">{{ page }}</a>
+            {% else %}
+              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="button btn-ignore-700">{{ page }}</a> 
+             {% endif %}
+          {% endfor %}
+          {% for page in (paginator.page..x) %}
+            {% if page == paginator.page %}
+              <div class="button current btn-ignore-700">{{ page }}</div>
+            {% elsif page == 1%}
+              <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="button btn-ignore-700">{{ page }}</a>
+            {% else %}
+             <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="button btn-ignore-700">{{ page }}</a> 
+            {% endif %}
+          {% endfor %}
+          <div class="button transparent btn-ignore-700">...</div>
+          {% for page in (1..paginator.total_pages)%}
+            {% if page == paginator.total_pages %}
+              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="button btn-ignore-700">{{ page }}</a> 
+            {% endif %}
+          {% endfor %}
+
+        {% else %} 
+          {% for page in (1..paginator.total_pages)%}
+            {% if page == 1 %}
+              <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="button btn-ignore-700">{{ page }}</a>
+            {% endif %}
+          {% endfor %}
+          <div class="button transparent btn-ignore-700">...</div>
+          {% for page in (y..z) %}
+            {% if page == paginator.page %}
+              <div class="button current btn-ignore-700">{{ page }}</div>
+            {% elsif page == 1%}
+              <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="button btn-ignore-700">{{ page }}</a>
+            {% else %}
+             <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="button btn-ignore-700">{{ page }}</a> 
+            {% endif %}
+          {% endfor %}
+          {% for page in (paginator.page..x) %}
+            {% if page == paginator.page %}
+              <div class="button current btn-ignore-700">{{ page }}</div>
+            {% elsif page == 1%}
+              <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="button btn-ignore-700">{{ page }}</a>
+            {% else %}
+             <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="button btn-ignore-700">{{ page }}</a> 
+            {% endif %}
+          {% endfor %}
+          <div class="button transparent btn-ignore-700">...</div>
+          {% for page in (1..paginator.total_pages)%}
+            {% if page == paginator.total_pages %}
+              <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="button btn-ignore-700 ">{{ page }}</a>
+            {% endif %}
+          {% endfor %}
+        {% endif %} 
+      {% endif %} 
+
+      {% if paginator.next_page %}
+      <!-- Add "Next" button to all -->
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button paginate">Next</a>
+      {% else %}
+        <div class="button paginate current">Next</div> 
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
