@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: A visual compendium of glowing creatures
-buy: http://www.redbubble.com/people/eleanorlutz/works/12319225-a-visual-compendium-of-glowing-creatures
+buy: http://www.redbubble.com/people/eleanorlutz/works/12319225-a-visual-compendium-of-glowing-creatures?p=art-print
 buytext: Get the poster
 image: /img/posts/07-21-14.png
 description: There's a lot of strange things out there in the dark. These ones are nice enough to let you know when they're around. 
