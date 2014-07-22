@@ -31,13 +31,8 @@
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 
 ### This is Tabletop Whale
-[Tabletop Whale](tabletopwhale.com) is an animated science infographic blog that I update every Friday. The website is a responsive, CSS-only Jekyll theme I built from scratch. 
+[Tabletop Whale](tabletopwhale.com) is a science infographic blog that I update every two or three weeks. The website is a responsive, CSS-only Jekyll theme I built from scratch. 
 
 ### Copyright Information
 
-_posts/
-img/
-
-These directories and their contents are not open source. They are licensed under an [Attribution-NonCommercial-NoDerivatives 4.0 International license](http://creativecommons.org/licenses/by-nc-nd/4.0/), which basically means you can't change them, use them commercially, or claim them as your own.
-
-All other directories and files are MIT Licensed. A link back to tabletopwhale.com would be appreciated, but not necessary. You can do as you lise with these files.
+This is not an open source repository. Feel free to look around for whatever you're curious about, but please don't copy and paste the entire website or use the artwork for yourself.
