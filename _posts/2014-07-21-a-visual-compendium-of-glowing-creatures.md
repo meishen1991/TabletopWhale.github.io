@@ -15,3 +15,7 @@ Today's post diagrams a few of the most well studied bioluminescent organisms. H
 
 <div> <img class="invisible-for-rss-only" src="/img/posts/07-21-14.png" /> </div>
 
+<ul class="sources">
+<li><h2>Acknowledgements</h2></li>
+<li>Thank you to Professor Steven Haddock for help with bioluminescent species, and to Jordi Paps for help with phylogeny.</li>
+</ul>
