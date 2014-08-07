@@ -14,3 +14,9 @@ It's more of an experiment than anything else, so feel free to leave comments ab
 Today's post diagrams a few of the most well studied bioluminescent organisms. Hope you enjoy it, and thanks for stopping by :)
 
 <div> <img class="invisible-for-rss-only" src="/img/posts/07-21-14.png" /> </div>
+
+<ul class="sources">
+<li><h2>Acknowledgements</h2></li>
+<li> Thank you to bioluminescence researcher <a href="http://biolum.eemb.ucsb.edu/" target="_blank">Steven Haddock</a> for his help with animal physiology, and to evolutionary biologist <a href="http://www.zoo.ox.ac.uk/people/view/paps%20montserrat_j.htm" target="_blank">Jordi Paps</a> for his help with phylogeny. </li>
+<li> The majority of the information used in this chart comes from the textbook <i>Bioluminescence: Chemical Principles and Methods (Revised Edition)</i> by Osamu Shimomura.</li>
+</ul>

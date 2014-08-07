@@ -142,6 +142,7 @@
 	.bottom 					{ 	padding-bottom: 30px; padding-top: 25px;}
 	.copyright-notice 			{ 	padding-bottom: 35px;}
 	.title-archive 				{	padding-top: 25px;	padding-bottom: 25px;}
+	.sources { padding-bottom: 20px;}
 }
 
 @media(max-width: 500px) {
