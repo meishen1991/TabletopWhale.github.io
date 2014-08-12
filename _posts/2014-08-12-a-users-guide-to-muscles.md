@@ -7,6 +7,7 @@ animation: yes
 webm: /img/posts/08-12-14.webm
 mp4: /img/posts/08-12-14.mp4
 image: /img/posts/08-12-14.jpg
+gif: /img/posts/08-12-14.gif
 description: Going to the gym? Take this with you. An animated infographic showing the molecular basics of muscle contraction. 
 ---
 
