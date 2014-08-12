@@ -3,10 +3,9 @@ layout: blog
 title: A user's guide to the human body &#58; The muscle edition
 buy: http://www.redbubble.com/people/eleanorlutz/works/12442316-a-users-guide-to-muscles?p=poster
 buytext: Get the poster
-animation: yes
 webm: /img/posts/08-12-14.webm
 mp4: /img/posts/08-12-14.mov
-image: /img/posts/08-12-14.jpg
+image: /img/posts/08-12-14.gif
 gif: /img/posts/08-12-14.gif
 description: Going to the gym? Take this with you. An animated infographic showing the molecular basics of muscle contraction. 
 ---
