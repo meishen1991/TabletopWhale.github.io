@@ -14,7 +14,7 @@ I love GIFs as an art form, so this month I tried making an infographic GIF. It'
 
 I've never made an animation this complex before, and I had a ton of fun with it. I'm definitely planning on more animated infographics in the future. I might even learn After Effects, though I'll have to see how feasable that is since my computer's getting kind of old and slow. 
 
-If you're having problems seeing the video loop you can find <a href="http://i.imgur.com/fgRP0H7.gif" target="_blank">the GIF file here</a>. The GIF link is actually better quality as well, since my vectors seem fuzzy in HTML5 video for some reason. As always, critiques and comments are very welcome :)
+As always, critiques and comments are very welcome :)
 
 <ul class="sources"> 
 <li> <h2> Acknowledgements </h2></li>
