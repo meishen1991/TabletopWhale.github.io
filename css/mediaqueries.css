@@ -138,7 +138,7 @@
 	.pagination 				{	height: 150px; }
 	.title-container-404		{ 	padding-top: 60px;}
 	.container1					{	padding: 0;	}
-	.btn-colfit 				{ 	width: 100%; padding: 0px;}
+	.btn-colfit 				{ 	width: 100%; padding: 0px; margin-left: 0px;}
 	.bottom 					{ 	padding-bottom: 30px; padding-top: 25px;}
 	.copyright-notice 			{ 	padding-bottom: 35px;}
 	.title-archive 				{	padding-top: 25px;	padding-bottom: 25px;}
